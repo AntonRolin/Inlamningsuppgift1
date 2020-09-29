@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * Created by: Anton Rolin
  * Date: 27/09/2020
@@ -5,9 +7,11 @@
  * Project: Inlamningsuppgift1
  * Copyright: MIT
  */
-public interface IPetFood {
+public interface IPetHotel {
 
     String getFoodPortion(String name);
+
+    void addPetList(List<Pet> pets);
 
 
 }

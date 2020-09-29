@@ -13,11 +13,12 @@ import java.util.*;
  * Klass som har en lista med alla djur på hotellet och deras attributer <br>
  * Tar input från användaren och kollar ifall namnet är giltigt och vilket djur det tillhör
  */
-public class PetHotel implements IPetFood{
+public class PetHotel implements IPetHotel{
 
     List<Pet> pets;
 
-    public PetHotel(List<Pet> pets){
+    @Override
+    public void addPetList(List<Pet> pets) {
         this.pets = pets;
     }
 
@@ -27,7 +28,7 @@ public class PetHotel implements IPetFood{
         for (Pet pet : pets ) {
 
             if(name.equalsIgnoreCase(pet.getName())){
-                return name +" ska ha "+pet.getGramsOfFood() +"g av typen "+ pet.getFoodType();
+                return pet.getName() +" ska ha "+pet.getGramsOfFood() +"g av typen "+ pet.getFoodType();
             }
         }
             return null;

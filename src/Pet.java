@@ -17,8 +17,6 @@ public class Pet{
     protected double gramsOfFood;
 
 
-    public Pet(){}
-
     public Pet(String name, int weight){
         this.name = name;
         this.weight = weight;
